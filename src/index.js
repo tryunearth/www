@@ -1,13 +1,19 @@
 import React from 'react'
 import { hydrate, render } from 'react-dom'
+import { ThemeProvider, CSSReset } from '@chakra-ui/core'
+
 import './index.css'
 import App from './App'
+import theme from './theme'
 import * as serviceWorker from './serviceWorker'
 
 const rootElement = document.getElementById('root')
 const app = (
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <CSSReset />
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 )
 
