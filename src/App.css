@@ -2,9 +2,3 @@ html,
 body {
   background-color: #22292f;
 }
-
-.container {
-  margin: 0 auto;
-  max-width: 90rem;
-  padding: 0 4rem;
-}

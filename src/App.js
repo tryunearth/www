@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Heading, Button, Link, ButtonGroup, Image } from '@chakra-ui/core'
 
-import heroScreenshot from './unearth-hero_screenshot.png'
+import heroScreenshot from './assets/unearth-hero_screenshot.png'
 import './App.css'
 import Navbar from './components/Navbar'
 
@@ -18,42 +18,50 @@ function App() {
           alignItems='center'
           color='white'
         >
-          <Box maxW='580px' pl={16}>
-            <Heading fontFamily='heading' fontSize='4rem' as='h1' mb='20px'>
-              Reddit Saves Done Right
-            </Heading>
-            <p style={{ fontSize: '24px', marginBottom: '10px' }}>
-              Unearth is the ultimate tool to help you manage and organize your
-              Reddit saves.
-            </p>
-            <ul style={{ fontSize: '20px', listStylePosition: 'inside' }}>
-              <li>find content quickly with enhanced searching & tagging</li>
-              <li>build a permanent library of everything you’ve saved</li>
-              <li>customize your experience using numerous preferences</li>
-            </ul>
-            <ButtonGroup spacing={2} mt={8}>
-              <Button
-                as={Link}
-                href='https://app.tryunearth.com/login'
-                variantColor='blue'
-                size='lg'
-                borderRadius='lg'
-                _hover={{ textDecoration: 'none' }}
+          <Box w='50%' mr={24} pb={12}>
+            <Box ml='auto' pl='3rem' maxW='594px'>
+              <Heading fontFamily='heading' fontSize='4rem' as='h1' mb='20px'>
+                Reddit Saves Done Right
+              </Heading>
+              <p
+                style={{
+                  fontSize: '24px',
+                  marginBottom: '10px',
+                  opacity: '0.7',
+                }}
               >
-                Get Started using Reddit
-              </Button>
-              <Button
-                as={Link}
-                href='https://github.com/tryunearth'
-                variantColor='gray'
-                size='lg'
-                borderRadius='lg'
-                color='#2a2829'
-                _hover={{ textDecoration: 'none' }}
-              >
-                Contribute on GitHub
-              </Button>
-            </ButtonGroup>
+                Unearth is the ultimate tool to help you manage and organize
+                your Reddit saves.
+              </p>
+              <ul style={{ fontSize: '20px', listStylePosition: 'inside' }}>
+                <li>find content quickly with enhanced searching & tagging</li>
+                <li>build a permanent library of everything you’ve saved</li>
+                <li>customize your experience using numerous preferences</li>
+              </ul>
+              <ButtonGroup spacing={2} mt={8}>
+                <Button
+                  as={Link}
+                  href='https://app.tryunearth.com/login'
+                  size='lg'
+                  borderRadius='lg'
+                  variantColor='blue'
+                  _hover={{ textDecoration: 'none' }}
+                >
+                  Get Started using Reddit
+                </Button>
+                <Button
+                  as={Link}
+                  href='https://github.com/tryunearth'
+                  size='lg'
+                  color='#2a2829'
+                  borderRadius='lg'
+                  variantColor='gray'
+                  _hover={{ textDecoration: 'none' }}
+                >
+                  Contribute on GitHub
+                </Button>
+              </ButtonGroup>
+            </Box>
           </Box>
           <Box w='50%' overflowX='hidden'>
             <Image

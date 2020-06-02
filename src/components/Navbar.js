@@ -1,5 +1,7 @@
 import React from 'react'
-import { Box, Heading, Flex, Text, Button, Link } from '@chakra-ui/core'
+import { Box, Flex, Text, Button, Link } from '@chakra-ui/core'
+
+import logo from '../assets/unearth-horizontal_lockup-dark.svg'
 
 const MenuItems = ({ children }) => (
   <Text mt={{ base: 4, md: 0 }} mr={6} mb={0} display='block'>
@@ -17,16 +19,15 @@ const Header = (props) => {
       align='center'
       justify='space-between'
       wrap='wrap'
-      py={12}
-      px={16}
+      m='0 auto'
+      maxW='80rem'
+      p={12}
       bg='#22292F'
       color='white'
       {...props}
     >
-      <Flex align='center' mr={5}>
-        <Heading as='h1' size='lg'>
-          Unearth
-        </Heading>
+      <Flex align='center'>
+        <img src={logo} alt='Unearth' width='75%' />
       </Flex>
 
       <Box display={{ sm: 'block', md: 'none' }} onClick={handleToggle}>
@@ -47,9 +48,15 @@ const Header = (props) => {
         alignItems='center'
         flexGrow={1}
       >
-        <MenuItems>About</MenuItems>
-        <MenuItems>Community</MenuItems>
-        <MenuItems>Contribute</MenuItems>
+        <MenuItems>
+          <Link href='/about'>About</Link>
+        </MenuItems>
+        <MenuItems>
+          <Link href='https://reddit.com/r/tryunearth'>Community</Link>
+        </MenuItems>
+        <MenuItems>
+          <Link href='https://github.com/tryunearth'>Contribute</Link>
+        </MenuItems>
       </Box>
 
       <Box
