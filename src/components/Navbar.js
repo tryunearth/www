@@ -1,5 +1,13 @@
 import React from 'react'
-import { Box, Flex, Text, Button, Link } from '@chakra-ui/core'
+import {
+  Box,
+  Flex,
+  Text,
+  Button,
+  Link,
+  useDisclosure,
+  Icon,
+} from '@chakra-ui/core'
 
 import logo from '../assets/unearth-horizontal_lockup-dark.svg'
 
@@ -10,8 +18,20 @@ const MenuItems = ({ children }) => (
 )
 
 const Header = (props) => {
-  const [show, setShow] = React.useState(false)
-  const handleToggle = () => setShow(!show)
+  const { isOpen, onToggle } = useDisclosure()
+  const menuIcon = isOpen ? (
+    <Icon name='close' />
+  ) : (
+    <svg
+      fill='white'
+      width='20px'
+      viewBox='0 0 20 20'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <title>Menu</title>
+      <path d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z' />
+    </svg>
+  )
 
   return (
     <Flex
@@ -21,30 +41,24 @@ const Header = (props) => {
       wrap='wrap'
       m='0 auto'
       maxW='80rem'
-      p={12}
+      py={12}
+      px={{ xs: 6, sm: 12 }}
       bg='#22292F'
       color='white'
+      fontSize='20px'
       {...props}
     >
       <Flex align='center'>
         <img src={logo} alt='Unearth' width='75%' />
       </Flex>
 
-      <Box display={{ sm: 'block', md: 'none' }} onClick={handleToggle}>
-        <svg
-          fill='white'
-          width='12px'
-          viewBox='0 0 20 20'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <title>Menu</title>
-          <path d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z' />
-        </svg>
+      <Box display={{ xs: 'block', md: 'none' }} onClick={onToggle}>
+        {menuIcon}
       </Box>
 
       <Box
-        display={{ sm: show ? 'block' : 'none', md: 'flex' }}
-        width={{ sm: 'full', md: 'auto' }}
+        display={{ xs: isOpen ? 'block' : 'none', md: 'flex' }}
+        width={{ xs: 'full', md: 'auto' }}
         alignItems='center'
         flexGrow={1}
       >
@@ -60,13 +74,14 @@ const Header = (props) => {
       </Box>
 
       <Box
-        display={{ sm: show ? 'block' : 'none', md: 'block' }}
+        display={{ xs: isOpen ? 'block' : 'none', md: 'block' }}
         mt={{ base: 4, md: 0 }}
       >
         <Button
           as={Link}
           href='https://app.tryunearth.com'
           bg='transparent'
+          fontSize='20px'
           rightIcon='arrow-forward'
           variant='link'
           variantColor='white'

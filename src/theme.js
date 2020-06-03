@@ -4,6 +4,6 @@ export default {
   ...theme,
   fonts: {
     ...theme.fonts,
-    heading: 'Georgia, serif',
+    heading: 'Recoleta, Georgia, serif',
   },
 }
