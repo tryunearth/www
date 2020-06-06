@@ -8,7 +8,7 @@ const About = () => (
     <Box m='0 auto' maxW='80rem' mb={8} px={{ xs: 6, sm: 12 }}>
       <Heading
         fontFamily='heading'
-        fontSize={{ xs: '3rem', sm: '3rem' }}
+        fontSize={{ xs: '2.25rem', sm: '3rem' }}
         as='h1'
         mb='10px'
       >
@@ -69,7 +69,7 @@ const About = () => (
           </Link>
           . If you'd like to help make Unearth better, feel free to check out
           the{` `}
-          <Link href='https://reddit.com/r/tryunearth' color='#007bff'>
+          <Link href='https://github.com/tryunearth' color='#007bff'>
             Unearth GitHub organization
           </Link>
           {` `}and submit any changes you'd like.
