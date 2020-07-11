@@ -13,7 +13,10 @@ import {
 } from '@chakra-ui/core'
 
 import Layout from '../components/Layout'
+import FeaturesList from '../components/FeaturesList'
+
 import heroScreenshot from '../assets/unearth-hero_screenshot.png'
+import ctaTwinkle from '../assets/unearth-twinkle.svg'
 
 const Home = () => (
   <Layout theme='dark'>
@@ -26,6 +29,7 @@ const Home = () => (
           justifyContent='space-between'
           alignItems='center'
           color='white'
+          pb={8}
         >
           <Box w={{ xs: '100%', lg: '50%' }} mr={{ xs: 0, lg: 24 }} pb={12}>
             <Box
@@ -105,7 +109,37 @@ const Home = () => (
           </Box>
         </Box>
       </Box>
-      <footer></footer>
+      <FeaturesList />
+      <Box bg='white' as='section'>
+        <Box
+          d='flex'
+          flexDirection='column'
+          justifyContent='center'
+          alignItems='center'
+          mb={12}
+          position='relative'
+        >
+          <Box position='absolute' top={0}>
+            <Image src={ctaTwinkle} alt='twinkle twinkle little star…' />
+          </Box>
+          <Heading as='h3' my='2.5rem'>
+            Ready to get started?
+          </Heading>
+          <Button
+            as={Link}
+            href='https://app.tryunearth.com/login'
+            size='lg'
+            w='auto'
+            borderRadius='lg'
+            bg='#007bff'
+            color='white'
+            _hover={{ textDecoration: 'none' }}
+            _active={{ bg: '#0056b4' }}
+          >
+            Try Unearth for Free
+          </Button>
+        </Box>
+      </Box>
     </Box>
   </Layout>
 )
