@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Heading, Text, Stack, Link, Image } from '@chakra-ui/core'
 
+import profilePic from '../assets/cedricamaya.jpg'
 import Layout from '../components/Layout'
 
 const About = () => (
@@ -80,7 +81,7 @@ const About = () => (
             <Image
               rounded='full'
               width='6rem'
-              src='https://pbs.twimg.com/profile_images/1212287268850786304/h73L-8pt_400x400.jpg'
+              src={profilePic}
               alt='Cedric smiling and looking like Tom from MySpace.'
             />
           </Box>
