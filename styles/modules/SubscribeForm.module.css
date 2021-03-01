@@ -1,0 +1,89 @@
+.form {
+  width: 100%;
+  max-width: 36rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.form p,
+.form input {
+  margin: 0;
+  font-family: var(--sans);
+  font-weight: 500;
+}
+
+.emailInput,
+.submit {
+  all: unset;
+  box-sizing: border-box;
+  padding: 15px 12px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.emailInput {
+  flex: 1;
+  background: var(--black-03);
+  border: 1px solid var(--black-05);
+  border-radius: 8px;
+  margin: 0 10px 0 0 !important;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  color: var(--primary-color-text);
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+}
+
+.submit:disabled {
+  opacity: 0.75;
+}
+
+.submit:hover {
+  cursor: pointer;
+}
+
+.submit:disabled:hover {
+  cursor: not-allowed;
+}
+
+@media (max-width: 736px) {
+  .form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .emailInput {
+    margin: 0 0 10px 0 !important;
+  }
+
+  .emailInput,
+  .submit {
+    width: 100%;
+  }
+}
+
+.heart {
+  width: 100%;
+  animation-name: heart;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes heart {
+  0% {
+    transform: translateY(10px);
+  }
+
+  50% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
