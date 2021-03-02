@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Publico';
+  src: url('/fonts/publico/PublicoText-Roman.otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Relative';
+  src: url('/fonts/relative/relative-bold.eot');
+  src: url('/fonts/relative/relative-bold.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/relative/relative-bold.woff2') format('woff2'),
+    url('/fonts/relative/relative-bold.woff') format('woff'),
+    url('/fonts/relative/relative-bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Relative';
+  src: url('/fonts/relative/relative-medium.eot');
+  src: url('/fonts/relative/relative-medium.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/relative/relative-medium.woff2') format('woff2'),
+    url('/fonts/relative/relative-medium.woff') format('woff'),
+    url('/fonts/relative/relative-medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Relative';
+  src: url('/fonts/relative/relative-book.eot');
+  src: url('/fonts/relative/relative-book.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/relative/relative-book.woff2') format('woff2'),
+    url('/fonts/relative/relative-book.woff') format('woff'),
+    url('/fonts/relative/relative-book.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}

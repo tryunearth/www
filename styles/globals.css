@@ -1,0 +1,49 @@
+@import './fonts.css';
+
+:root {
+  /* COLORS */
+  --primary-color: #ff4500;
+  --primary-color-text: #ffffff;
+
+  --secondary-color: #452209;
+  --secondary-color-text: #ffffff;
+
+  --beige: #fbf9f0;
+
+  --black: #000000;
+  --black-50: rgba(0, 0, 0, 0.5);
+  --black-05: rgba(0, 0, 0, 0.05);
+  --black-03: rgba(0, 0, 0, 0.03);
+
+  /* FONT-FAMILIES */
+  --sans: 'Relative', var(--sans-fallback);
+  --serif: 'Publico', Georgia, 'Times New Roman', Times, serif;
+  --sans-fallback: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--beige);
+  font-family: var(--serif);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
