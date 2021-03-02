@@ -44,7 +44,10 @@ export default function Home() {
           property='og:description'
           content='Gone are the days of mindlessly saving things and forgetting to look at it later. Unearth gives you the tools you need to get the most out of Reddit saves.'
         />
-        <meta property='og:image' content='/og-image.png' />
+        <meta
+          property='og:image'
+          content='https://www.tryunearth.com/og-image.png'
+        />
 
         {/* <!-- Twitter --> */}
         <meta property='twitter:card' content='summary_large_image' />
@@ -57,7 +60,10 @@ export default function Home() {
           property='twitter:description'
           content='Gone are the days of mindlessly saving things and forgetting to look at it later. Unearth gives you the tools you need to get the most out of Reddit saves.'
         />
-        <meta property='twitter:image' content='/og-image.png' />
+        <meta
+          property='twitter:image'
+          content='https://www.tryunearth.com/og-image.png'
+        />
 
         <link
           rel='preload'
