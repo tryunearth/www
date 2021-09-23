@@ -87,3 +87,10 @@
     transform: translateY(10px);
   }
 }
+
+.hr {
+  height: 0;
+  width: 50%;
+  border: 1px solid var(--black-50);
+  margin: 3rem auto 1rem;
+}

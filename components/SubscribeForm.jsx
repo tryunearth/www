@@ -40,12 +40,36 @@ const SubscribeForm = () => {
   }
 
   const SuccessMessage = (
-    <img
-      src='https://ouch-cdn.icons8.com/preview/356/cf5ff481-c369-4f0a-bd7f-59656dfbba08.png'
-      alt='thanks!'
-      className={styles.heart}
-    />
-  )
+    <>
+      <img
+        src="/images/heart-hands.png"
+        alt="thanks!"
+        className={styles.heart}
+      />
+
+      <hr className={styles.hr} />
+
+      <div
+        className="author"
+        style={{ margin: "0 auto", fontSize: "85%", opacity: 0.5 }}
+      >
+        <div
+          className="avatar"
+          style={{
+            backgroundImage:
+              'url("https://ouch-cdn2.icons8.com/Gk6MLJNFj3wuaqf-Mr_v-uu6mVXczpfDGVoIdCdUtNo/rs:fit:64:64/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy91aS1lbGVt/LzQ3MS8yY2ViNGVi/MC1mZDVhLTQxODEt/YTNlZi1iMDFmZDQx/MTVmMzMucG5n.png")',
+          }}
+        />
+        <a href="https://icons8.com/illustrations/style--3d-hands-fun-and-wild">
+          3D Hands Fun&amp;Wild
+        </a>{" "}
+        by{" "}
+        <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6">
+          Icons8
+        </a>
+      </div>
+    </>
+  );
   const Form = (
     <form
       className={styles.form}
